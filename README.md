@@ -8,7 +8,7 @@ An end-to-end analysis of Dubai property listings (2020 to 2026): which communit
 
 | Market Overview | Resale vs Off-plan vs Rent | Trends and Metro |
 |---|---|---|
-| ![Page 1](dashboard/screenshots/page1_market_overview.png) | ![Page 2](dashboard/screenshots/page2_sale_offplan_rent.png) | ![Page 3](dashboard/screenshots/page3_trends_metro.png) |
+| ![Page 1](POWERBI_DASHBOARD/page1_market_overview.png.png) | ![Page 2](POWERBI_DASHBOARD/page2_sale_offplan_rent.png.png) | ![Page 3](POWERBI_DASHBOARD/page3_trends_metro.png.png) |
 
 **Power BI file:** [Download the .pbix from Google Drive](https://drive.google.com/file/d/1DucT9pgrFcgkObgxpetrTaqC58HSYSvc/view?usp=sharing) (open it with Power BI Desktop).
 
@@ -70,13 +70,13 @@ An end-to-end analysis of Dubai property listings (2020 to 2026): which communit
 ```
 dubai-real-estate-analysis/
 ├── README.md
-├── sql/
+├── SQL/
 │   ├── 01_create_tables.sql
 │   └── 02_analysis_queries.sql
-├── python/
+├── PYTHON/
 │   └── dubai_real_estate_python.ipynb
-└── dashboard/
-    └── screenshots/
+└── POWERBI_DASHBOARD/
+    └── (3 dashboard screenshots)
 ```
 
 The raw data is not included. Download it from the Kaggle link above. The Power BI file (`.pbix`) is shared through the Google Drive link in the dashboard section.
@@ -84,7 +84,7 @@ The raw data is not included. Download it from the Kaggle link above. The Power 
 ## How to reproduce
 
 1. Download the five CSV files from Kaggle.
-2. Run `sql/01_create_tables.sql` in MySQL, then open `python/dubai_real_estate_python.ipynb`, set `DATA_FOLDER` and your MySQL username in section 1, and run sections 1 and 2 to load the CSVs (the notebook asks for your password when it runs).
-3. Run the queries in `sql/02_analysis_queries.sql`.
+2. Run `SQL/01_create_tables.sql` in MySQL, then open `PYTHON/dubai_real_estate_python.ipynb`, set `DATA_FOLDER` and your MySQL username in section 1, and run sections 1 and 2 to load the CSVs (the notebook asks for your password when it runs).
+3. Run the queries in `SQL/02_analysis_queries.sql`.
 4. Run sections 3 to 6 of the notebook to clean the data, test the metro effect and create the cleaned files.
 5. Download the `.pbix` file from the Google Drive link above, open it in Power BI Desktop, and point the data sources at the cleaned files.
